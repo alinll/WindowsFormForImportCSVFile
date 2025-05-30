@@ -35,9 +35,10 @@
             this.Comment = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BtnImportCsv = new System.Windows.Forms.Button();
             this.DataGriedViewProjects = new System.Windows.Forms.DataGridView();
-            this.BtnDeleteNegativeFeedbacks = new System.Windows.Forms.Button();
             this.NameOfProject = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AverageRating = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BtnDeleteNegativeFeedbacks = new System.Windows.Forms.Button();
+            this.inputNegativeRating = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewFeedbacks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGriedViewProjects)).BeginInit();
             this.SuspendLayout();
@@ -108,16 +109,6 @@
             this.DataGriedViewProjects.Size = new System.Drawing.Size(723, 188);
             this.DataGriedViewProjects.TabIndex = 2;
             // 
-            // BtnDeleteNegativeFeedbacks
-            // 
-            this.BtnDeleteNegativeFeedbacks.Location = new System.Drawing.Point(1106, 309);
-            this.BtnDeleteNegativeFeedbacks.Name = "BtnDeleteNegativeFeedbacks";
-            this.BtnDeleteNegativeFeedbacks.Size = new System.Drawing.Size(101, 56);
-            this.BtnDeleteNegativeFeedbacks.TabIndex = 3;
-            this.BtnDeleteNegativeFeedbacks.Text = "Видалити негативні відгуки";
-            this.BtnDeleteNegativeFeedbacks.UseVisualStyleBackColor = true;
-            this.BtnDeleteNegativeFeedbacks.Click += new System.EventHandler(this.BtnDeleteNegativeFeedbacks_Click);
-            // 
             // NameOfProject
             // 
             this.NameOfProject.HeaderText = "Назва проєкту";
@@ -132,11 +123,30 @@
             this.AverageRating.Name = "AverageRating";
             this.AverageRating.Width = 125;
             // 
+            // BtnDeleteNegativeFeedbacks
+            // 
+            this.BtnDeleteNegativeFeedbacks.Location = new System.Drawing.Point(1106, 309);
+            this.BtnDeleteNegativeFeedbacks.Name = "BtnDeleteNegativeFeedbacks";
+            this.BtnDeleteNegativeFeedbacks.Size = new System.Drawing.Size(101, 70);
+            this.BtnDeleteNegativeFeedbacks.TabIndex = 3;
+            this.BtnDeleteNegativeFeedbacks.Text = "Видалити негативні відгуки";
+            this.BtnDeleteNegativeFeedbacks.UseVisualStyleBackColor = true;
+            this.BtnDeleteNegativeFeedbacks.Click += new System.EventHandler(this.BtnDeleteNegativeFeedbacks_Click);
+            // 
+            // inputNegativeRating
+            // 
+            this.inputNegativeRating.Location = new System.Drawing.Point(1064, 281);
+            this.inputNegativeRating.Name = "inputNegativeRating";
+            this.inputNegativeRating.Size = new System.Drawing.Size(179, 22);
+            this.inputNegativeRating.TabIndex = 0;
+            this.inputNegativeRating.Text = "Введіть негативну оцінку";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1340, 450);
+            this.Controls.Add(this.inputNegativeRating);
             this.Controls.Add(this.BtnDeleteNegativeFeedbacks);
             this.Controls.Add(this.DataGriedViewProjects);
             this.Controls.Add(this.BtnImportCsv);
@@ -146,6 +156,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewFeedbacks)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGriedViewProjects)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -161,6 +172,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Comment;
         private System.Windows.Forms.DataGridViewTextBoxColumn NameOfProject;
         private System.Windows.Forms.DataGridViewTextBoxColumn AverageRating;
+        private System.Windows.Forms.TextBox inputNegativeRating;
     }
 }
 
